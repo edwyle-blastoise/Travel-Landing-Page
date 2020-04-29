@@ -1,0 +1,183 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+}
+body a {
+  text-decoration: none;
+}
+body .blue-links {
+  color: #006DFE;
+}
+body .blue-links img {
+  margin-left: 24px;
+}
+
+#section-1 {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 90vh;
+  background-image: url("./images/background.png");
+  background-size: cover;
+  background-position: center;
+  color: #FFFFFF;
+}
+#section-1 h1 {
+  margin: 176px 0 22px;
+  font-size: 3.125em;
+  font-weight: 500;
+}
+@media (max-width: 1440px) {
+  #section-1 h1 {
+    max-width: 620px;
+  }
+}
+#section-1 p {
+  letter-spacing: 0.01em;
+}
+#section-1 .text {
+  max-width: 640px;
+  font-size: 1.2em;
+  line-height: 1.5em;
+}
+@media (max-width: 1440px) {
+  #section-1 .text {
+    font-size: 1em;
+    max-width: 550px;
+  }
+}
+
+.container {
+  width: 73.5vw;
+  margin: 0 auto;
+}
+@media (min-width: 1441px) {
+  .container {
+    width: 50vw;
+  }
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 56px;
+}
+.nav ul {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 6px;
+}
+.nav li {
+  list-style: none;
+}
+.nav a, .nav .sign-in {
+  text-decoration: none;
+  font-size: 1.125em;
+  color: #FFFFFF;
+  margin-left: 82px;
+}
+
+.questions {
+  max-width: 887px;
+  display: flex;
+  justify-content: space-between;
+}
+.questions .question {
+  margin-top: 32px;
+  height: 7.5vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 2px solid #BFC0C5;
+}
+@media (max-width: 1440px) {
+  .questions .question {
+    width: 20.7vw;
+  }
+}
+.questions .question p {
+  padding-left: 25px;
+  font-size: 1.125em;
+}
+.questions .search {
+  margin-top: 55px;
+  width: 171px;
+  height: 58px;
+  background: #1B7DFF;
+  color: #FFFFFF;
+  font-size: 1.5em;
+  line-height: 1.813em;
+  border: none;
+}
+
+.benefits {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  position: absolute;
+  padding: 0 7% 5%;
+  width: 87.5vw;
+  height: 61.5vh;
+  top: 69vh;
+  left: 6.2vw;
+  background: #FFFFFF;
+  box-shadow: 0 2px 20px rgba(21, 24, 36, 0.15993);
+  z-index: 1;
+}
+.benefits h2 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.188em;
+  line-height: 2.625;
+}
+
+.benefits-items {
+  position: relative;
+  top: 27px;
+  display: inline-grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 4vw;
+}
+.benefits-items .item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 27vh;
+}
+.benefits-items .item p {
+  line-height: 1.5em;
+  position: relative;
+  bottom: 5px;
+}
+.benefits-items #shop {
+  position: relative;
+  top: 10px;
+}
+.benefits-items #promoting {
+  position: relative;
+  top: 8px;
+}
+
+#section-2 {
+  position: relative;
+  top: 50vh;
+  padding: 0 7% 5%;
+}
+
+.sect-2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/*# sourceMappingURL=style.css.map */
