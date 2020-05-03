@@ -19,6 +19,13 @@ body .blue-links {
 body .blue-links img {
   margin-left: 24px;
 }
+body hr {
+  border: none;
+  height: 2px;
+  width: 18vw;
+  background-color: #006DFE;
+  margin-top: 7px;
+}
 
 #section-1 {
   display: flex;
@@ -31,9 +38,11 @@ body .blue-links img {
   color: #FFFFFF;
 }
 #section-1 h1 {
-  margin: 176px 0 22px;
+  font-style: normal;
   font-size: 3.125em;
   font-weight: 500;
+  color: #FFFFFF;
+  margin: 176px 0 22px;
 }
 @media (max-width: 1440px) {
   #section-1 h1 {
@@ -79,8 +88,10 @@ body .blue-links img {
   list-style: none;
 }
 .nav a, .nav .sign-in {
-  text-decoration: none;
+  font-style: normal;
+  font-weight: normal;
   font-size: 1.125em;
+  text-decoration: none;
   color: #FFFFFF;
   margin-left: 82px;
 }
@@ -104,8 +115,10 @@ body .blue-links img {
   }
 }
 .questions .question p {
-  padding-left: 25px;
+  font-style: normal;
+  font-weight: normal;
   font-size: 1.125em;
+  padding-left: 25px;
 }
 .questions .search {
   margin-top: 55px;
@@ -133,11 +146,17 @@ body .blue-links img {
   box-shadow: 0 2px 20px rgba(21, 24, 36, 0.15993);
   z-index: 1;
 }
+@media (min-width: 1441px) {
+  .benefits {
+    width: 70vw;
+    left: 15vw;
+  }
+}
 .benefits h2 {
   font-style: normal;
-  font-weight: 500;
   font-size: 2.188em;
-  line-height: 2.625;
+  font-weight: 500;
+  color: #102746;
 }
 
 .benefits-items {
@@ -153,6 +172,11 @@ body .blue-links img {
   justify-content: space-between;
   align-items: flex-start;
   height: 27vh;
+}
+.benefits-items .item .item-title {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.125em;
 }
 .benefits-items .item p {
   line-height: 1.5em;
@@ -171,13 +195,96 @@ body .blue-links img {
 #section-2 {
   position: relative;
   top: 50vh;
-  padding: 0 7% 5%;
+  left: 6.2vw;
+  width: 87.5vw;
+  height: 100vh;
+}
+@media (min-width: 1441px) {
+  #section-2 {
+    width: 70vw;
+    left: 15vw;
+  }
 }
 
-.sect-2 {
+.get-inspired {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+.get-inspired h2 {
+  font-style: normal;
+  font-size: 2.188em;
+  font-weight: 500;
+  color: #102746;
+}
+
+.big-img, .smaller-img {
+  display: flex;
+}
+
+#places .name {
+  font-style: normal;
+  font-size: 3.125em;
+  font-weight: 500;
+  color: #FFFFFF;
+  font-weight: bold;
+  position: relative;
+  bottom: 11vh;
+  left: 5vw;
+}
+
+.prefecture, .neighborhood {
+  display: flex;
+  justify-content: space-between;
+}
+
+.prefecture-text, .neighborhood-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.prefecture-text {
+  padding: 0 0 0 108px;
+}
+
+.neighborhood-text {
+  padding: 0 108px 0 53px;
+}
+
+#section-3 {
+  position: relative;
+  top: 100vh;
+  left: 6.2vw;
+  width: 87.5vw;
+  height: 100vh;
+}
+@media (min-width: 1441px) {
+  #section-3 {
+    width: 70vw;
+    left: 15vw;
+  }
+}
+
+.top-places {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 50px;
+}
+.top-places .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  max-width: 29vw;
+  height: 60vh;
+}
+.top-places .more {
+  width: 118px;
+  height: 42px;
+  background: #006DFE;
+  color: #FFFFFF;
+  border: none;
 }
 
 /*# sourceMappingURL=style.css.map */
