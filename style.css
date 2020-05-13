@@ -13,6 +13,9 @@ body {
 body a {
   text-decoration: none;
 }
+body li {
+  list-style: none;
+}
 body img {
   max-width: 100%;
   height: auto;
@@ -41,7 +44,7 @@ body hr {
   display: flex;
   flex-direction: column;
   width: 100vw;
-  min-height: 100vh;
+  min-height: 88.5vh;
   background: url("./images/background.jpg") no-repeat center;
   background-size: cover;
   color: #FFFFFF;
@@ -92,14 +95,10 @@ body hr {
   justify-content: space-between;
   padding-top: 6px;
 }
-.header .nav li {
-  list-style: none;
-}
 .header .nav .header-link {
   font-style: normal;
   font-weight: normal;
   font-size: 1.125em;
-  text-decoration: none;
   color: #FFFFFF;
   margin-left: 82px;
 }
@@ -108,6 +107,13 @@ body hr {
 }
 .header .search-info {
   display: flex;
+}
+@media (max-width: 1164px) {
+  .header .search-info {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
 }
 .header .search-info .search-field {
   width: 297px;
@@ -178,6 +184,7 @@ body hr {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 4vw;
+  margin-top: 34px;
 }
 .benefits .benefits-items .benefits-item {
   grid-column: span 1;
@@ -187,16 +194,27 @@ body hr {
   font-style: normal;
   font-weight: normal;
   font-size: 1.125em;
+  margin-bottom: 20px;
 }
 .benefits .benefits-items .benefits-item p {
   line-height: 1.5em;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 .benefits .benefits-items .benefits-item .benefits-img {
   margin-bottom: 37px;
 }
 .benefits .benefits-items #shop {
-  padding-bottom: 5px;
+  margin-top: 6px;
+}
+@media (max-width: 998px) {
+  .benefits .benefits-items #temple-text, .benefits .benefits-items #man-text {
+    margin-top: 60px;
+  }
+}
+@media (max-width: 905px) {
+  .benefits .benefits-items #man-text {
+    margin-top: 30px;
+  }
 }
 
 /* Next-trip styles */
@@ -221,6 +239,9 @@ body hr {
   font-weight: 500;
   color: #102746;
 }
+.next-trip-title .view-all {
+  margin-top: 18px;
+}
 
 .next-trip-cards {
   display: grid;
@@ -230,16 +251,21 @@ body hr {
 }
 .next-trip-cards .next-trip-card {
   position: relative;
+  overflow: hidden;
 }
 .next-trip-cards .next-trip-card img {
   width: 100%;
   object-fit: cover;
+}
+.next-trip-cards .next-trip-card:hover img, .next-trip-cards .next-trip-card:focus img, .next-trip-cards .next-trip-card:active img {
+  transform: scale(1.05);
 }
 .next-trip-cards .size-lg {
   grid-column: span 3;
 }
 .next-trip-cards .size-lg img {
   height: 354px;
+  overflow: hidden;
 }
 .next-trip-cards .size-sm {
   grid-column: span 2;
@@ -256,11 +282,19 @@ body hr {
   bottom: 27px;
   left: 29px;
 }
+.next-trip-cards .next-trip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+}
 
 /* Temples styles */
 .temples {
   max-width: 87.5vw;
-  margin: 0 auto 139px;
+  margin: 0 auto 70px;
 }
 @media (min-width: 1441px) {
   .temples {
@@ -274,29 +308,43 @@ body hr {
   margin-bottom: 77px;
 }
 .temples .prefecture-text, .temples .neighborhood-text, .temples .prefecture-img, .temples .neighborhood-img {
-  width: 50%;
+  width: 47%;
 }
 .temples .prefecture-text, .temples .neighborhood-text {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  line-height: 1.5em;
+  letter-spacing: 0.01em;
+}
+.temples .prefecture-text .prefecture-title, .temples .prefecture-text .neighborhood-title, .temples .neighborhood-text .prefecture-title, .temples .neighborhood-text .neighborhood-title {
+  font-style: normal;
+  font-size: 1.875em;
+  font-weight: 500;
+  line-height: 40px;
+  color: #102746;
 }
 .temples .prefecture-text {
-  padding: 0 0 0 108px;
+  padding: 0 32px 0 32px;
 }
 .temples .neighborhood-text {
-  padding: 0 108px 0 53px;
+  padding: 0 22px 0 42px;
+}
+.temples .neighborhood-text p {
+  margin-bottom: 26px;
+}
+.temples .neighborhood-text .neighborhood-title {
+  max-width: 357px;
 }
 
 /* Places styles */
 .places {
-  margin: 0 auto 144px;
-  width: 87.5vw;
+  margin: 0 auto 114px;
+  width: 88.5vw;
 }
 @media (min-width: 1441px) {
   .places {
     width: 70vw;
-    margin: auto;
   }
 }
 .places h2 {
@@ -307,6 +355,7 @@ body hr {
 }
 
 .top-places {
+  margin: 55px 0 31px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 53px;
@@ -322,35 +371,86 @@ body hr {
   object-fit: cover;
   margin-bottom: 45px;
 }
+.top-places .place-card p {
+  line-height: 1.5em;
+  max-width: 386px;
+}
 .top-places .more {
-  margin-top: 31px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1em;
+  margin-top: 30px;
   width: 118px;
   height: 42px;
   background: #006DFE;
   color: #FFFFFF;
   border: none;
 }
-
-/* Video styles */
-.video {
-  position: relative;
-  width: 100vw;
-}
-.video .video-img {
-  width: 100%;
-}
-.video .play-btn {
-  position: absolute;
-  top: 45%;
-  left: 45vw;
-  z-index: 2;
+.top-places .more:hover, .top-places .more:focus, .top-places .more:active {
+  background: #1364d0;
+  outline: none;
+  transform: scale(1.05);
 }
 
 /* Footer styles */
 .footer {
   width: 100vw;
-  height: 30vh;
   background: #0E1D28;
+}
+.footer .video {
+  position: relative;
+  width: 100vw;
+}
+.footer .video .video-img {
+  width: 100%;
+}
+.footer .video .play-btn {
+  position: absolute;
+  top: 45%;
+  left: 46.1vw;
+  z-index: 2;
+}
+.footer .video .play-btn:hover, .footer .video .play-btn:focus, .footer .video .play-btn:active {
+  outline: none;
+  transform: scale(1.05);
+}
+.footer .footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 117px;
+  margin-left: 193px;
+  width: 75vw;
+  height: 370px;
+}
+.footer .footer-logo {
+  width: 170px;
+  height: 64px;
+}
+.footer .links, .footer .column-links {
+  display: flex;
+}
+.footer .column-links {
+  flex-direction: column;
+  margin-right: 140px;
+}
+.footer .column-links:last-child {
+  margin-right: 0;
+}
+.footer h3 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.125em;
+  color: #ffffff;
+}
+.footer li {
+  margin-top: 7px;
+}
+.footer .footer-link {
+  color: #FFFFFF;
+}
+.footer .footer-link:hover, .footer .footer-link:focus, .footer .footer-link:active {
+  opacity: 0.7;
 }
 
 /*# sourceMappingURL=style.css.map */
