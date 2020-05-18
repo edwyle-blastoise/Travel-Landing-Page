@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Travel Landing Page</title>
@@ -9,14 +10,28 @@
 <body>
     <section class="header">
         <div class="container">
-            <header class="nav">
-                <a href="/"><img src="./images/logo.svg" alt="Odigo"></a>
-                <ul>
-                    <li><a class="header-link" href="#">Articles</a></li>
-                    <li><a class="header-link" href="#">Locations</a></li>
-                    <li><a class="header-link" href="#">Videos</a></li>
-                    <li><a class="header-link" href="#">Sign in</a></li>
-                </ul>
+            <header class="header_nav">
+                <a href="#"><img src="./images/logo.svg" alt="Odigo"></a>
+                <nav class="nav">
+                    <ul>
+                        <li><a class="header-link" href="#">Articles</a></li>
+                        <li><a class="header-link" href="#">Locations</a></li>
+                        <li><a class="header-link" href="#">Videos</a></li>
+                        <li><a class="header-link" href="#">Sign in</a></li>
+                    </ul>
+                    <div class="nav-close">
+                        <span class="close-line"></span>
+                        <span class="close-line"></span>
+                    </div>
+                </nav>
+
+                <div class="burger-menu">
+                    <div class="burger">
+                        <span class="burger-line"></span>
+                        <span class="burger-line"></span>
+                        <span class="burger-line"></span>
+                    </div>
+                </div>
             </header>
 
             <div class="top-content">
@@ -62,10 +77,11 @@
 
     <section class="next-trip">
         <div class="next-trip-title">
-            <h2>Get inspired for your next trip</h2>
+            <h2>Get inspired for your next trip <hr></h2>
+
             <a class="blue-links view-all" href="">VIEW ALL <img src="./images/arrow.svg" alt="arrow"></a>
         </div>
-        <hr>
+
 
         <div class="next-trip-cards">
             <figure class="next-trip-card size-lg">
@@ -108,7 +124,7 @@
                 <p>Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over. Being gorgeous
                     with belly side up i could pee on this if i had the energy but under the bed, for attack the child, open
                     the door, </p>
-                <a class="blue-links" href="">VIEW PREFECTURE<img src="./images/arrow.svg" alt="arrow"></a>
+                <a class="blue-links temples-links" href="">VIEW PREFECTURE<img src="./images/arrow.svg" alt="arrow"></a>
             </div>
         </div>
 
@@ -118,7 +134,7 @@
                 <p>Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over. Being gorgeous
                     with belly side up i could pee on this if i had the energy but under the bed, for attack the child, open
                     the door, </p>
-                <a class="blue-links" href="">VIEW NEIGHBORHOOD<img src="./images/arrow.svg" alt="arrow"></a>
+                <a class="blue-links temples-links" href="">VIEW NEIGHBORHOOD<img src="./images/arrow.svg" alt="arrow"></a>
             </div>
             <img class="neighborhood-img" src="./images/torii.jpg" alt="torii">
         </div>
@@ -177,11 +193,13 @@
     <section class="footer">
         <div class="video">
             <img class="video-img" src="./images/video.jpg" alt="video">
-            <img class="play-btn" src="./images/play.svg" alt="play">
+            <div class="play-btn">
+                <img src="./images/play.svg" alt="play">
+            </div>
         </div>
 
         <div class="footer-content">
-            <a href="/"><img class="footer-logo" src="./images/logo.svg" alt="Odigo"></a>
+            <a href="#"><img class="footer-logo" src="./images/logo.svg" alt="Odigo"></a>
             <div class="links">
                 <div class="column-links">
                     <h3>Company</h3>
@@ -217,5 +235,6 @@
 
     </section>
 
+<script src="main.js"></script>
 </body>
 </html>
