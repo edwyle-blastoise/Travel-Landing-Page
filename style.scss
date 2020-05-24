@@ -319,6 +319,15 @@ body {
     }
   }
 
+  @media (max-width: 767px) {
+    .size-lg, .size-sm {
+      grid-column: span 6;
+      img {
+        height: 283px;
+      }
+    }
+  }
+
   .name {
     @include large-text;
     position: absolute;
@@ -451,23 +460,28 @@ body {
 .footer {
   width: 100vw;
   background: #0E1D28;
+
   .video {
     position: relative;
     width: 100vw;
+
     .video-img {
       width: 100%;
     }
+
     .play-btn {
       position: absolute;
       top: 45%;
       left: 46.1vw;
       z-index: 2;
+
       &:hover, &:focus, &:active {
         outline: none;
         transform: scale(1.05);
       }
     }
   }
+
   .footer-content {
     display: flex;
     justify-content: space-between;
@@ -483,30 +497,46 @@ body {
     height: 64px;
   }
 
-  .links, .column-links {
-    display: flex;
-  }
-
-  .column-links {
-    flex-direction: column;
-    margin-right: 140px;
-
-    &:last-child {
-      margin-right: 0;
+    .links, .column-links {
+      display: flex;
+      @media (max-width: 767px) {
+        .links {
+          width: 90vw;
+          justify-content: space-between;
+          margin-top: 50px;
+        }
+        .column-links {
+          margin-right: 20px;
+        }
+      }
+      @media (max-width: 280px) {
+        flex-direction: column;
+        margin: 0 0 30px;
+      }
     }
-  }
 
-  h3 {
-    @include middle-text;
-    color: #ffffff;
-  }
+    .column-links {
+      flex-direction: column;
+      margin-right: 140px;
+      &:last-child {
+        margin-right: 0;
+      }
+      @media (max-width: 1200px) {
+        margin-right: 75px;
+      }
+    }
 
-  li {
-    margin-top: 7px;
-  }
+    h3 {
+      @include middle-text;
+      color: #ffffff;
+    }
 
-  .footer-link {
-    color: #FFFFFF;
+    li {
+      margin-top: 7px;
+    }
+
+    .footer-link {
+      color: #FFFFFF;
 
     &:hover, &:focus, &:active {
       opacity: .7;
