@@ -57,7 +57,7 @@ body hr {
 }
 .top h1 {
   font-style: normal;
-  font-size: 3.125em;
+  font-size: 3.125rem;
   font-weight: 500;
   color: #FFFFFF;
   margin: 176px 0 22px;
@@ -67,23 +67,23 @@ body hr {
     max-width: 620px;
   }
 }
-@media (max-height: 767px) {
+@media (max-height: 767px), (max-width: 767px) {
   .top h1 {
     margin-top: 70px;
-    font-size: 1.5em;
+    font-size: 2rem;
   }
 }
 .top p {
-  letter-spacing: 0.01em;
+  letter-spacing: 0.01rem;
 }
 .top .text {
   max-width: 640px;
-  font-size: 1.2em;
-  line-height: 1.5em;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
 }
 @media (max-width: 1440px) {
   .top .text {
-    font-size: 1em;
+    font-size: 1rem;
     max-width: 550px;
   }
 }
@@ -127,7 +127,7 @@ body hr {
 .top .header_nav .nav ul .header-link {
   font-style: normal;
   font-weight: normal;
-  font-size: 1.125em;
+  font-size: 1.125rem;
   color: #FFFFFF;
   margin-left: 82px;
   display: block;
@@ -148,7 +148,7 @@ body hr {
   .top .header_nav .nav ul .header-link {
     margin: 0 0 30px 0;
     font-style: normal;
-    font-size: 2.188em;
+    font-size: 2.188rem;
     font-weight: 500;
     color: #102746;
     color: #ffffff;
@@ -226,12 +226,12 @@ body hr {
   padding: 0 0 22px 43px;
   font-style: normal;
   font-weight: normal;
-  font-size: 1.125em;
+  font-size: 1.125rem;
   color: white;
 }
 @media (max-height: 767px) {
   .top .search-info .search-field {
-    font-size: 1em;
+    font-size: 1rem;
   }
 }
 @media (max-width: 1164px) {
@@ -247,7 +247,7 @@ body hr {
 .top .search-info .search-field::placeholder {
   font-style: normal;
   font-weight: normal;
-  font-size: 1.125em;
+  font-size: 1.125rem;
   color: white;
 }
 .top .search-info .search-field:focus {
@@ -259,8 +259,8 @@ body hr {
   height: 58px;
   background: #1B7DFF;
   color: #FFFFFF;
-  font-size: 1.5em;
-  line-height: 1.813em;
+  font-size: 1.5rem;
+  line-height: 1.813rem;
   border: none;
 }
 .top .search-info .search-btn:hover, .top .search-info .search-btn:focus, .top .search-info .search-btn:active {
@@ -289,7 +289,7 @@ body hr {
 }
 .benefits h2 {
   font-style: normal;
-  font-size: 2.188em;
+  font-size: 2.188rem;
   font-weight: 500;
   color: #102746;
   width: 100%;
@@ -318,14 +318,14 @@ body hr {
 .benefits .benefits-items .benefits-item .item-title {
   font-style: normal;
   font-weight: normal;
-  font-size: 1.125em;
+  font-size: 1.125rem;
   margin-bottom: 20px;
 }
 .benefits .benefits-items .benefits-item p {
   font-style: normal;
   font-weight: normal;
-  font-size: 1em;
-  line-height: 1.5em;
+  font-size: 1rem;
+  line-height: 1.5rem;
   margin-bottom: 40px;
 }
 .benefits .benefits-items .benefits-item .benefits-img {
@@ -363,7 +363,7 @@ body hr {
     margin-bottom: 50px;
   }
   .benefits h2 {
-    font-size: 1.5em;
+    font-size: 1.5rem;
     padding: 50px 100px 50px 7%;
   }
   .benefits .benefits-items {
@@ -382,9 +382,14 @@ body hr {
 }
 .next-trip-title h2 {
   font-style: normal;
-  font-size: 2.188em;
+  font-size: 2.188rem;
   font-weight: 500;
   color: #102746;
+}
+@media (max-height: 767px), (max-width: 767px) {
+  .next-trip-title h2 {
+    font-size: 1.5rem;
+  }
 }
 .next-trip-title .view-all {
   margin-top: 18px;
@@ -449,12 +454,17 @@ body hr {
 }
 .next-trip-cards .name {
   font-style: normal;
-  font-size: 3.125em;
+  font-size: 3.125rem;
   font-weight: 500;
   color: #FFFFFF;
   position: absolute;
   bottom: 27px;
   left: 29px;
+}
+@media (max-width: 767px), (max-height: 767px) {
+  .next-trip-cards .name {
+    font-size: 2.5rem;
+  }
 }
 .next-trip-cards .next-trip-link {
   position: absolute;
@@ -478,12 +488,12 @@ body hr {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  line-height: 1.5em;
-  letter-spacing: 0.01em;
+  line-height: 1.5rem;
+  letter-spacing: 0.01rem;
 }
 .temples .prefecture .prefecture-text .prefecture-title, .temples .prefecture .prefecture-text .neighborhood-title, .temples .prefecture .neighborhood-text .prefecture-title, .temples .prefecture .neighborhood-text .neighborhood-title, .temples .neighborhood .prefecture-text .prefecture-title, .temples .neighborhood .prefecture-text .neighborhood-title, .temples .neighborhood .neighborhood-text .prefecture-title, .temples .neighborhood .neighborhood-text .neighborhood-title {
   font-style: normal;
-  font-size: 1.875em;
+  font-size: 1.875rem;
   font-weight: 500;
   line-height: 40px;
   color: #102746;
@@ -491,6 +501,11 @@ body hr {
 @media (max-width: 949px) {
   .temples .prefecture .prefecture-text .prefecture-title, .temples .prefecture .prefecture-text .neighborhood-title, .temples .prefecture .neighborhood-text .prefecture-title, .temples .prefecture .neighborhood-text .neighborhood-title, .temples .neighborhood .prefecture-text .prefecture-title, .temples .neighborhood .prefecture-text .neighborhood-title, .temples .neighborhood .neighborhood-text .prefecture-title, .temples .neighborhood .neighborhood-text .neighborhood-title {
     margin-bottom: 10px;
+  }
+}
+@media (max-height: 767px), (max-width: 767px) {
+  .temples .prefecture .prefecture-text .prefecture-title, .temples .prefecture .prefecture-text .neighborhood-title, .temples .prefecture .neighborhood-text .prefecture-title, .temples .prefecture .neighborhood-text .neighborhood-title, .temples .neighborhood .prefecture-text .prefecture-title, .temples .neighborhood .prefecture-text .neighborhood-title, .temples .neighborhood .neighborhood-text .prefecture-title, .temples .neighborhood .neighborhood-text .neighborhood-title {
+    font-size: 1.4rem;
   }
 }
 .temples .prefecture .prefecture-text, .temples .neighborhood .prefecture-text {
@@ -532,7 +547,7 @@ body hr {
     flex-direction: column;
   }
 }
-@media (max-height: 767px) {
+@media (max-height: 767px), (max-width: 767px) {
   .temples .prefecture {
     margin-bottom: 50px;
   }
@@ -558,9 +573,14 @@ body hr {
 }
 .places h2 {
   font-style: normal;
-  font-size: 2.188em;
+  font-size: 2.188rem;
   font-weight: 500;
   color: #102746;
+}
+@media (max-height: 767px), (max-width: 767px) {
+  .places h2 {
+    font-size: 1.5rem;
+  }
 }
 
 .top-places {
@@ -570,7 +590,7 @@ body hr {
   grid-column-gap: 53px;
   grid-row-gap: 58px;
 }
-@media (max-width: 767px) {
+@media (max-width: 949px) {
   .top-places {
     grid-template-columns: 1fr;
   }
@@ -580,19 +600,53 @@ body hr {
   flex-direction: column;
   justify-content: space-around;
 }
-.top-places .place-card img {
-  max-height: 386px;
-  object-fit: cover;
+.top-places .place-card .place-img {
+  position: relative;
   margin-bottom: 45px;
 }
+.top-places .place-card .place-img .place-photo {
+  width: 100%;
+  max-height: 377px;
+  object-fit: cover;
+}
 .top-places .place-card p {
-  line-height: 1.5em;
+  line-height: 1.5rem;
   max-width: 386px;
+}
+.top-places .place-card .place-info {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.125rem;
+  position: absolute;
+  width: 100%;
+  padding: 16px 25px;
+  bottom: 3px;
+  left: 0;
+  background: rgba(21, 24, 36, 0.6);
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+}
+.top-places .place-card .place-info .stats {
+  display: flex;
+}
+.top-places .place-card .place-info .stats .likes {
+  margin: 0 14px 0 4px;
+}
+.top-places .place-card .place-info .stats .comments {
+  margin-left: 9px;
+}
+@media (min-width: 950px) and (max-width: 1024px) {
+  .top-places .place-card .place-info {
+    padding: 16px 8px;
+  }
 }
 .top-places .more {
   font-style: normal;
   font-weight: normal;
-  font-size: 1em;
+  font-size: 1rem;
   margin-top: 30px;
   width: 118px;
   height: 42px;
@@ -714,7 +768,7 @@ body hr {
 .footer .footer-content h3 {
   font-style: normal;
   font-weight: normal;
-  font-size: 1.125em;
+  font-size: 1.125rem;
   color: #ffffff;
 }
 .footer .footer-content li {

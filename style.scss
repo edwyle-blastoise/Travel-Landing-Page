@@ -1,7 +1,7 @@
 @mixin large-text {
   font: {
     style: normal;
-    size: 3.125em;
+    size: 3.125rem;
     weight: 500;
   }
   color: #FFFFFF;
@@ -10,7 +10,7 @@
 @mixin h2-text {
   font: {
     style: normal;
-    size: 2.188em;
+    size: 2.188rem;
     weight: 500;
   }
   color: #102746;
@@ -19,7 +19,7 @@
 @mixin h3-text {
   font: {
     style: normal;
-    size: 1.875em;
+    size: 1.875rem;
     weight: 500;
   }
   line-height: 40px;
@@ -30,7 +30,7 @@
   font: {
     style: normal;
     weight: normal;
-    size: 1.125em;
+    size: 1.125rem;
   }
 }
 
@@ -38,7 +38,7 @@
   font: {
     style: normal;
     weight: normal;
-    size: 1em;
+    size: 1rem;
   }
 }
 
@@ -113,24 +113,24 @@ body {
     @media (max-width: 1440px) {
       max-width: 620px;
     }
-    @media (max-height: 767px) {
+    @media (max-height: 767px), (max-width: 767px) {
       margin-top: 70px;
-      font-size: 1.5em;;
+      font-size: 2rem;;
     }
   }
 
   p {
-    letter-spacing: 0.01em;
+    letter-spacing: 0.01rem;
   }
 
   .text {
     max-width: 640px;
-    font-size: 1.2em;
+    font-size: 1.2rem;
     @media (max-width: 1440px) {
-      font-size: 1em;
+      font-size: 1rem;
       max-width: 550px;
     }
-    line-height: 1.5em;
+    line-height: 1.5rem;
   }
 
   .container {
@@ -269,7 +269,7 @@ body {
       @include middle-text;
       color: white;
       @media (max-height: 767px) {
-        font-size: 1em;
+        font-size: 1rem;
       }
       @media (max-width: 1164px) {
         margin: 80px 60px 0 0;
@@ -294,8 +294,8 @@ body {
       height: 58px;
       background: #1B7DFF;
       color: #FFFFFF;
-      font-size: 1.5em;
-      line-height: 1.813em;
+      font-size: 1.5rem;
+      line-height: 1.813rem;
       border: none;
 
       &:hover, &:focus, &:active {
@@ -355,7 +355,7 @@ body {
 
       p {
         @include normal-text;
-        line-height: 1.5em;
+        line-height: 1.5rem;
         margin-bottom: 40px;
       }
 
@@ -393,7 +393,7 @@ body {
   @media (max-height: 767px) {
     margin-bottom: 50px;
     h2 {
-      font-size: 1.5em;
+      font-size: 1.5rem;
       padding: 50px 100px 50px 7%;
     }
     .benefits-items {
@@ -414,6 +414,9 @@ body {
 
   h2 {
     @include h2-text;
+    @media (max-height: 767px), (max-width: 767px) {
+      font-size: 1.5rem;
+    }
   }
 
   .view-all {
@@ -489,6 +492,9 @@ body {
     position: absolute;
     bottom: 27px;
     left: 29px;
+    @media (max-width: 767px), (max-height: 767px) {
+      font-size: 2.5rem;
+    }
   }
 
   .next-trip-link {
@@ -515,13 +521,16 @@ body {
       display: flex;
       flex-direction: column;
       justify-content: space-around;
-      line-height: 1.5em;
-      letter-spacing: 0.01em;
+      line-height: 1.5rem;
+      letter-spacing: 0.01rem;
 
       .prefecture-title, .neighborhood-title {
         @include h3-text;
         @media (max-width: 949px) {
           margin-bottom: 10px;
+        }
+        @media (max-height: 767px), (max-width: 767px) {
+          font-size: 1.4rem;
         }
       }
     }
@@ -569,7 +578,7 @@ body {
       flex-direction: column;
     }
   }
-  @media (max-height: 767px) {
+  @media (max-height: 767px), (max-width: 767px) {
     .prefecture {
       margin-bottom: 50px;
     }
@@ -593,6 +602,9 @@ body {
 
   h2 {
     @include h2-text;
+    @media (max-height: 767px), (max-width: 767px) {
+      font-size: 1.5rem;
+    }
   }
 }
 
@@ -602,7 +614,7 @@ body {
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 53px;
   grid-row-gap: 58px;
-  @media (max-width: 767px) {
+  @media (max-width: 949px) {
     grid-template-columns: 1fr;
   }
 
@@ -611,15 +623,45 @@ body {
     flex-direction: column;
     justify-content: space-around;
 
-    img {
-      max-height: 386px;
-      object-fit: cover;
+    .place-img {
+      position: relative;
       margin-bottom: 45px;
+      .place-photo {
+        width: 100%;
+        max-height: 377px;
+        object-fit: cover;
+      }
     }
 
     p {
-      line-height: 1.5em;
+      line-height: 1.5rem;
       max-width: 386px;
+    }
+    .place-info {
+      @include middle-text;
+      position: absolute;
+      width: 100%;
+      padding: 16px 25px;
+      bottom: 3px;
+      left: 0;
+      background: rgba(21, 24, 36, 0.6);
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 2;
+      .stats {
+        display: flex;
+        .likes {
+          margin: 0 14px 0 4px;
+        }
+        .comments {
+          margin-left: 9px;
+        }
+      }
+      @media (min-width: 950px) and (max-width: 1024px) {
+        padding: 16px 8px;
+      }
     }
   }
 
